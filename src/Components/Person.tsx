@@ -1,4 +1,4 @@
-import React,{ Fragment, useState } from 'react'
+import React from 'react'
 
 const people = [
     {
@@ -24,8 +24,6 @@ const people = [
   
 function Person()
 {
-
-
     return(
         <ul className="divide-y divide-gray-200">
       {people.map((person:any) => (
