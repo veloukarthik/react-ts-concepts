@@ -15,7 +15,7 @@ const AppContext = createContext<AppContextType | undefined>(undefined);
 
 // Provider component
 export function AppContextProvider({ children }: { children: ReactNode }) {
-  const [user, setUser] = useState<User>({ name: "John" });
+  const [user, setUser] = useState<User>({ name: "John Doe" });
 
   return (
     <AppContext.Provider value={{ user, setUser }}>

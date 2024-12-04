@@ -12,7 +12,7 @@ function Profile() {
   const { user, setUser } = context;
 
   const handleUpdateName = () => {
-    setUser({ name: "Jane Doe" });
+    setUser({ name: (user.name=="John Doe") ? "Jane Doe" : "John Doe" });
   };
 
   return (
