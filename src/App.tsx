@@ -5,6 +5,8 @@ import Person from './Components/Person';
 import Counter from './Components/Counter';
 import Todos from './Components/Todos';
 import Profile from './Components/Profile';
+import LiftingState from './Components/LiftingState';
+
 
 export default function Example() {
 
@@ -24,6 +26,10 @@ export default function Example() {
     {
       path: "/todo",
       element: <Todos />
+    },
+    {
+      path: "/lifting",
+      element: <LiftingState />
     }
   ]);
 

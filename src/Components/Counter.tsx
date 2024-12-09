@@ -1,4 +1,5 @@
 import { useReducer } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 const initialState = { count: 0 };
 
@@ -18,14 +19,16 @@ function reducer(state: typeof initialState, action: ACTIONTYPE) {
 }
 
 function Counter() {
-  const [state, dispatch] = useReducer(reducer, initialState);
+  // const [state, dispatch] = useReducer(reducer, initialState);
+  const count = useSelector((state: any) => state.counter);
+  const dispatch = useDispatch();
   return (
     <div className="container mx-auto bg-indigo-900 text-center py-4 lg:px-4 text-white">
       <h1>Counter App</h1>
       <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={() => dispatch({ type: "decrement", payload: 5 })}>
         -
       </button>
-       {state.count}
+       {count}
       <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={() => dispatch({ type: "increment", payload: 5 })}>
         +
       </button>
